@@ -9,7 +9,7 @@ class FileController extends Controller
 {
     //
     public function index() {
-        return view('file-uploads', [
+        return view('File.file-uploads', [
             'title' => "Input Data",
         ]);
     }
@@ -18,7 +18,7 @@ class FileController extends Controller
     // }
     public function create() {
         $files = File::all();
-        return view('file-index',[
+        return view('File.file-index',[
             'title' => 'Table Data',
         ], compact('files'));
     }
